@@ -1,7 +1,7 @@
 class SongsController < ApplicationController
 
   def index
-    @songs = Song.all 
+    @songs = Song.all
   end
 
   def show
@@ -30,7 +30,7 @@ class SongsController < ApplicationController
   private
 
   def strong_params(*args)
-    params.require(song).permit(*args)
+    params.require(:song).permit(*args)
   end
 
 end
